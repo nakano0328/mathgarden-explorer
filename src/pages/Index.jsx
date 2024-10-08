@@ -1,16 +1,17 @@
-import Head from 'next/head';
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import Link from 'next/link';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white">
-      <Head>
+      <Helmet>
         <title>数学の勉強サイト</title>
         <meta name="description" content="シンプルで分かりやすい数学の勉強サイト" />
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </Helmet>
 
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-4xl font-bold text-center mb-8 text-blue-800">数学の勉強サイトへようこそ</h1>
@@ -23,7 +24,7 @@ const Index = () => {
                 <CardDescription>数学の基礎から応用まで</CardDescription>
               </CardHeader>
               <CardContent>
-                <Link href={`/${subject}`} passHref>
+                <Link to={`/${subject}`}>
                   <Button className="w-full">学習を始める</Button>
                 </Link>
               </CardContent>
