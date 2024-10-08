@@ -1,25 +1,15 @@
 import React from 'react';
-import { Toaster } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { navItems } from "./nav-items";
-
-const queryClient = new QueryClient();
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Index from './pages/Index';
+import SubjectPage from './pages/SubjectPage';
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Router>
-        <Routes>
-          {navItems.map(({ to, page: Page }) => (
-            <Route key={to} path={to} element={<Page />} />
-          ))}
-        </Routes>
-      </Router>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Index />} />
+      <Route path="/:subject" element={<SubjectPage />} />
+    </Routes>
+  </Router>
 );
 
 export default App;
