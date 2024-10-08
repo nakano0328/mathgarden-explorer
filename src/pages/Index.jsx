@@ -15,7 +15,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 text-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white text-gray-800">
       <Helmet>
         <title>数学の探求 | 魅力的な数学の世界へようこそ</title>
         <meta name="description" content="数学の美しさと不思議さを探求する、魅力的な学習サイト" />
@@ -23,7 +23,7 @@ const Index = () => {
 
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          <h1 className="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+          <h1 className="text-4xl font-extrabold text-gray-800">
             数学の探求
           </h1>
           <Search />
